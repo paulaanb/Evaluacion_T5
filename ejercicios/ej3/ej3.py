@@ -49,4 +49,11 @@ class Gestor:
         fichero = open('personajes.pckl', 'wb')
         pickle.dump(self.personajes, fichero)
         fichero.close()
-        
+
+g = Gestor()
+g.agregar(Personaje("Caballero", 4,2,4,2))
+g.agregar(Personaje("Guerrero", 2,4,2,4))
+g.agregar(Personaje("Arquero", 2,4,1,8))
+g.mostrar
+g.borrar("Arquero")
+g.mostrar
