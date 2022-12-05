@@ -1,9 +1,13 @@
+from io import open
 #Creamos clase personaje
 import pickle 
 class Personaje:     
-    def __init__(self,nombre, propiedades):         
+    def __init__(self,nombre, vida, ataque, defensa, alcance):         
         self.nombre  = nombre  
-        self.propiedades = propiedades        
+        self.vida = vida 
+        self.ataque = ataque
+        self.defensa = defensa
+        self.alcance = alcance       
     def __str__(self):        
         return self.nombre  
         return self.propiedades
@@ -25,3 +29,5 @@ personas = pickle.load(fichero)
 fichero.close()  
 for x in personas:     
     print(x)
+
+
