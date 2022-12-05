@@ -35,3 +35,14 @@ class Gestor:
             return
         for p in self.personajes:
             print(p)
+    def cargar(self):
+        fichero = open('personajes.pckl', 'ab+')
+        fichero.seek(0)
+        try:
+            self.personajes = pickle.load(fichero)
+        except:
+            pass 
+        finally:
+            fichero.close()
+            print("El personaje {} se ha cargado en el fichero".format(len(self.personajes)))
+            
