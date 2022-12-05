@@ -1,11 +1,14 @@
 #Creamos clase personaje
 import pickle 
 class Personaje:     
-    def __init__(self,nombre):         
-        self.nombre  = nombre          
+    def __init__(self,nombre, propiedades):         
+        self.nombre  = nombre  
+        self.propiedades = propiedades        
     def __str__(self):        
         return self.nombre  
+        return self.propiedades
 nombres =['Caballero','Guerrero','Arquero']  
+propiedades = ['Vida','Ataque','Defensa','Alcance']
 personas = []  
 for x in nombres:     
     p = Persona(x)     
