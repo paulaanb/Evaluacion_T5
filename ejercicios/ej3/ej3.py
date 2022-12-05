@@ -29,5 +29,9 @@ class Gestor:
                 self.guardar()
                 print("\nEl personaje {} ha sido borrado".format(nombre))
                 return
-                
-
+    def mostrar(self):
+        if len(self.personajes) == 0:
+            print("El gestor esta vacio.")
+            return
+        for p in self.personajes:
+            print(p)
