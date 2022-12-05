@@ -14,3 +14,11 @@ for x in nombres:
     fichero = open('personajes.pckl','wb') 
     pickle.dump(personas, fichero)  
     fichero.close() 
+
+#Lectura de la clase personaje 
+import pickle  
+fichero = open('personajes.pckl','rb')  
+personas = pickle.load(fichero) 
+fichero.close()  
+for x in personas:     
+    print(x)
