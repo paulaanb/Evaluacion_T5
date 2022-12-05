@@ -10,23 +10,17 @@ class Personaje:
         self.alcance = alcance   
     def __str__(self):
         return "{} = {}vida, {} ataque, {}defensa, {}alcance".format(self.nombre, self.vida, self.ataque, self.defensa,self.alcance)    
-nombres =['Caballero','Guerrero','Arquero']  
-propiedades = ['Vida','Ataque','Defensa','Alcance']
-personas = []  
-for x in nombres:     
-    p = Persona(x)     
-    personas.append(p.nombre)  
-    print(personas)  
-    fichero = open('personajes.pckl','wb') 
-    pickle.dump(personas, fichero)  
-    fichero.close() 
+#Creamos clase gestor
+class Gestor:
+    personajes = []
 
-#Lectura de la clase personaje 
-import pickle  
-fichero = open('personajes.pckl','rb')  
-personas = pickle.load(fichero) 
-fichero.close()  
-for x in personas:     
-    print(x)
+    def __init__(self):
+        self.cargar
+    def agregar(self,p):
+        for pTemp in self.personajes:
+            if pTemp.nombre = p.nombre
+            return
+        self.personajes.append(p)
+        self.guardar()
 
 
