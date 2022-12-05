@@ -45,4 +45,8 @@ class Gestor:
         finally:
             fichero.close()
             print("El personaje {} se ha cargado en el fichero".format(len(self.personajes)))
-            
+    def guardar(self):
+        fichero = open('personajes.pckl', 'wb')
+        pickle.dump(self.personajes, fichero)
+        fichero.close()
+        
