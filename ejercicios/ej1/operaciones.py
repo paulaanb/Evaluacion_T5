@@ -20,6 +20,8 @@ def suma():
     num2 = input("Numero 2: ")
     num1 = float(num1)
     num2 = float(num2)
+    except ZeroDivisionError:
+       print('Error: Tipo de dato no válido')
     print ("Resultado: ", num1+num2)
     print("")
     menu()
@@ -31,6 +33,8 @@ def resta():
     num2 = input("Numero 2: ")
     num1 = float(num1)
     num2 = float(num2)
+    except ZeroDivisionError:
+       print('Error: Tipo de dato no válido')
     print ("Resultado: ", num1-num2)
     print("")
     menu()
@@ -41,6 +45,8 @@ def multiplicacion():
     num2 = input("Numero 2: ")
     num1 = float(num1)
     num2 = float(num2)
+    except ZeroDivisionError:
+       print('Error: Tipo de dato no válido')
     print ("Resultado: ", num1*num2)
     print("")
     menu()
@@ -52,6 +58,8 @@ def division():
     num1 = float(num1)
     num2 = float(num2)
     except ZeroDivisionError:
+       print('Error: Tipo de dato no válido')
+    except TypeError:
        print('Error: No es posible dividir entre cero')
     print ("Resultado: ", num1/num2)
     print("")
